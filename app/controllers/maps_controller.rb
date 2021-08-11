@@ -10,8 +10,8 @@ class MapsController < ApplicationController
     # remote: trueのアクセスに対して、
     # map.js.erbが変えるようになります。
     respond_to do |format|
-      format.html
       format.js
+      format.json { render 'map', @latlng }
     end
   end
 
